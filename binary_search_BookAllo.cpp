@@ -21,6 +21,7 @@ bool ispossible(int a[],int n,int m,int mid)
             {
                 return false;
             }
+            cout<<"no it is not possible"<<endl;
             pagesum = 0;
             pagesum += a[i];
         }
@@ -39,12 +40,13 @@ int search(int a[],int n,int m)
     //cout<<sum<<endl;
     int e=sum;
     
-    int mid;
+    int mid=s+(e-s)/2;
     int ans=-1;
     
     while(s<=e)
     {
-        mid = s+(e-s)/2;
+        
+        cout<<mid;
 
         if(ispossible(a,n,m,mid))
         {
@@ -54,6 +56,7 @@ int search(int a[],int n,int m)
         else{
             s=mid+1;
         }
+         mid=s+(e-s)/2;
     }
     return ans;
 }
@@ -66,5 +69,5 @@ int main()
     int n=4;
     int m=2;
 
-    cout<<"pivote is :"<<search(arr,n,m)<<endl;
+    cout<<"ans is :"<<search(arr,n,m)<<endl;
 }
