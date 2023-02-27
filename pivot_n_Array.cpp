@@ -9,7 +9,7 @@ int find_pivote(int a[],int n)
     
     while(s<e)
     {
-        mid = (s+(e-s)/2);
+        mid = s+(e-s)/2;
 
         if(a[mid] > a[0])
         {
@@ -19,16 +19,34 @@ int find_pivote(int a[],int n)
             e=mid;
         }
     }
-    return s;
+    return a[s];
+}
+
+int usingbinary(int *arr,int s,int e)
+{
+    int mid;
+     if(s > e)
+        return arr[s];
+
+    mid = s+(e-s)/2;
+
+    if(arr[mid] > arr[0])
+    {
+        return usingbinary(arr, mid+1, e);
+    }
+    else{
+        return usingbinary(arr, s, mid-1);
+    }
 }
 
 
 int main()
 {
 
-    int arr[5]={3,4,10,17,1};
+    int arr[5]={7,9,1,2,3};
     int n=5;
-    int key;
 
-    cout<<"pivote is :"<<find_pivote(arr,n)<<endl;
+    //cout<<"pivote is :"<<find_pivote(arr,n)<<endl;
+
+    cout << "pivote element is" << usingbinary(arr,0,4)<<endl;
 }
