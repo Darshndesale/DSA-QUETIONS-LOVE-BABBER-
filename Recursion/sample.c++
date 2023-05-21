@@ -34,5 +34,5 @@ int main()
     // print(n); //n=1;
 
     int num = 1;
-    printsum(num,100,0);
+    printsum(num,5,0);
 }
