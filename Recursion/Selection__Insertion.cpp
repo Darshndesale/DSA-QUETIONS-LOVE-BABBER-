@@ -24,7 +24,7 @@ void SlectionSort(int *arr,int n)
 int main()
 {
 
-    int arr[5] ={2,5,1,11,8};
+    int arr[5] ={20,5,10,11,8};
     int n = 5;
 
     SlectionSort(arr,5);

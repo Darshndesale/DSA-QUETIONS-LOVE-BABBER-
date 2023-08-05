@@ -110,18 +110,19 @@ int main()
 
     root = createtree(root);
     //data i/p --> 1 3 7 -1 -1 11 -1 -1 5 17 -1 -1 -1
+    // create data
     cout<<"This is the after traversal :"<<endl;
     leveltraversal(root);
 
     //inoreder traversal
-    cout<<"this is the o/p of inoreder traversal :"<<endl;
-    inoreder(root);
-    cout<<endl;
-    cout<<"this is the o/p of preoreder traversal :"<<endl;
-    preoreder(root);
-    cout<<endl;
-    cout<<"this is the o/p of postoreder traversal :"<<endl;
-    postoreder(root);
+    // cout<<"this is the o/p of inoreder traversal :"<<endl;
+    // inoreder(root);
+    // cout<<endl;
+    // cout<<"this is the o/p of preoreder traversal :"<<endl;
+    // preoreder(root);
+    // cout<<endl;
+    // cout<<"this is the o/p of postoreder traversal :"<<endl;
+    // postoreder(root);
     return 0;
 
 }
